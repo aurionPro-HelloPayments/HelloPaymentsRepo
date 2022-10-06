@@ -25,6 +25,7 @@ private BeforeClass base;
 	@Before(order = 0)
 	public void initDriver() {
 		System.out.println("*************Open a new browser*************");
+		System.out.println("*************Open a new browser again*************");
 	}
 	
 	@Before(order = 1)
