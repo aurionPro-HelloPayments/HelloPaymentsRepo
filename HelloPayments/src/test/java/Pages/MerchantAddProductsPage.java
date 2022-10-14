@@ -47,6 +47,9 @@ public class MerchantAddProductsPage extends testbaseclass {
 	@FindBy(xpath = "//input[@placeholder='0.00']")
 	WebElement Product_Unit_Price;
 	
+	@FindBy(xpath = "//sui-checkbox[@formcontrolname='Taxable']")
+	WebElement Product_Taxable;
+	
 	@FindBy(xpath = "//textarea[@placeholder='Product Description']")
 	WebElement Product_Description;
 	
@@ -73,10 +76,20 @@ public class MerchantAddProductsPage extends testbaseclass {
 	}
 	
 	
-	public void enterUnitPrice(String unitPrice)
+	public void enterUnitPrice(String unitPrice) throws InterruptedException
 	{
 		try {
 			Product_Unit_Price.sendKeys(unitPrice);;
+			Thread.sleep(7000);
+		}catch(NoSuchElementException e) {
+			e.getMessage();
+		}
+	}
+	
+	public void clickTaxable() throws InterruptedException
+	{
+		try {
+			Product_Taxable.click();;
 		}catch(NoSuchElementException e) {
 			e.getMessage();
 		}

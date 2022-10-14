@@ -10,6 +10,7 @@ Feature: Merchant Portal Login
     And User clicks on AddProduct button
     And User enters "<ProductName>" in ProductName field
     And User enters "<UnitPrice>" in UnitPrice field
+    And User clicks on Tax button
     And User enters "<Description>" in Description field
     And User clicks on Save button
     Then User close the brower
@@ -19,7 +20,6 @@ Feature: Merchant Portal Login
    Examples: 
     | UserName           | Password | ProductName |UnitPrice |Description |
     | ABMerchant | ABmerchant03 | Gold | 10.00 | This is a 1st product added by automation |
-    | ABMerchant | ABmerchant03 | Silver | 20.00 | This is a 2nd  product added by automation |
 
     
 

@@ -54,10 +54,18 @@ public class MerchantAddProductsStepDefinition extends testbaseclass {
 	}
 
 	@Then("User enters {string} in UnitPrice field")
-	public void user_enters_in_unit_price_field(String unitPrice) {
+	public void user_enters_in_unit_price_field(String unitPrice) throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 		merchantProductPage = new MerchantAddProductsPage();
 		merchantProductPage.enterUnitPrice(unitPrice);
+	  
+	}
+	
+	@Then("User clicks on Tax button")
+	public void user_clicks_on_tax_button() throws InterruptedException {
+	    // Write code here that turns the phrase above into concrete actions
+		merchantProductPage = new MerchantAddProductsPage();
+		merchantProductPage.clickTaxable();
 	  
 	}
 
